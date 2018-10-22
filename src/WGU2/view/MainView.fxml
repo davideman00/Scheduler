@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="939.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WGU2.view.MainViewController">
+   <children>
+      <Accordion layoutX="-2.0" layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="939.0">
+        <panes>
+          <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="350.0" prefWidth="804.0" text="Calendar">
+            <content>
+              <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="274.0" prefWidth="937.0">
+                     <children>
+                        <TableView fx:id="tableViewCalendar" layoutX="3.0" layoutY="62.0" prefHeight="257.0" prefWidth="630.0">
+                          <columns>
+                              <TableColumn fx:id="tableColumnAppCustomer" prefWidth="96.0" text="Customer" />
+                              <TableColumn fx:id="tableColumnAppStart" prefWidth="143.0" text="Start" />
+                              <TableColumn fx:id="tableColumnAppEnd" minWidth="0.0" prefWidth="146.0" text="End" />
+                            <TableColumn fx:id="tableColumnAppDescription" prefWidth="82.0" text="Description" />
+                              <TableColumn fx:id="tableColumnAppLocation" prefWidth="78.0" text="Location" />
+                              <TableColumn fx:id="tableColumnAppConsultant" prefWidth="84.0" text="Consultant" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonModifyAppointment" layoutX="497.0" layoutY="332.0" mnemonicParsing="false" onAction="#handlerModifyAppointment" text="Update" />
+                        <Button fx:id="buttonNewAppointment" layoutX="450.0" layoutY="332.0" mnemonicParsing="false" onAction="#handlerNewAppointment" text="New" />
+                        <Button fx:id="buttonDeleteAppointment" layoutX="557.0" layoutY="332.0" mnemonicParsing="false" onAction="#handlerDeleteAppointment" text="Set Inactive" />
+                        <Button fx:id="buttonMonth" layoutX="3.0" layoutY="24.0" mnemonicParsing="false" onAction="#handlerMonth" text="Current Month" />
+                        <Button fx:id="buttonWeek" layoutX="101.0" layoutY="24.0" mnemonicParsing="false" onAction="#handlerWeek" text="Current Week" />
+                        <Button fx:id="buttonAll" layoutX="194.0" layoutY="24.0" mnemonicParsing="false" onAction="#handlerAll" text="All Appointments" />
+                        <Label fx:id="labelCustHeader" layoutX="439.0" layoutY="28.0" text="Header" />
+                        <Button fx:id="buttonPrevious" layoutX="354.0" layoutY="24.0" mnemonicParsing="false" onAction="#handlerPrevious" text="&lt;&lt;" />
+                        <Button fx:id="buttonNext" layoutX="391.0" layoutY="24.0" mnemonicParsing="false" onAction="#handlerNext" text="&gt;&gt;" />
+                        <ComboBox fx:id="comboBoxUser" layoutX="651.0" layoutY="62.0" prefWidth="150.0" />
+                        <Label layoutX="651.0" layoutY="37.0" text="Consultant Select" />
+                        <Button layoutX="652.0" layoutY="103.0" mnemonicParsing="false" onAction="#handlerAppTypes" text="Appointment Types Report" />
+                        <Button layoutX="651.0" layoutY="140.0" mnemonicParsing="false" onAction="#handlerAppLocation" text="Appointment Locations Report" />
+                        <Button layoutX="810.0" layoutY="62.0" mnemonicParsing="false" onAction="#handlerConsultantReport" text="Consultant Report" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="302.0" prefWidth="939.0" text="Customers">
+            <content>
+              <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="210.0" prefWidth="937.0">
+                     <children>
+                        <TableView fx:id="tableViewCustomers" prefHeight="198.0" prefWidth="851.0" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="62.0">
+                          <columns>
+                            <TableColumn fx:id="tableColCustCustId" prefWidth="48.000001549720764" text="cust_Id" />
+                            <TableColumn fx:id="tableColCustName" prefWidth="101.99996185302734" text="name" />
+                              <TableColumn fx:id="tableColCustActive" prefWidth="75.0" text="active" />
+                              <TableColumn fx:id="tableColCustAddressId" prefWidth="48.0" text="add_Id" />
+                              <TableColumn fx:id="tableColCustAddress" prefWidth="102.0" text="address" />
+                              <TableColumn fx:id="tableColCustPostalCode" prefWidth="75.0" text="postalCode" />
+                              <TableColumn fx:id="tableColCustPhone" prefWidth="139.00003051757812" text="phone" />
+                              <TableColumn fx:id="tableColCustCityId" prefWidth="42.0" text="cityId" />
+                              <TableColumn fx:id="tableColCustCity" prefWidth="97.0" text="city" />
+                              <TableColumn fx:id="tableColCustCountryId" prefWidth="64.0" text="countryId" />
+                              <TableColumn fx:id="tableColCustCountry" prefWidth="57.0" text="country" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonAddCustomer" layoutX="675.0" layoutY="281.0" mnemonicParsing="false" onAction="#handlerAddCustomer" text="New" />
+                        <Button fx:id="buttonModifyCustomer" layoutX="723.0" layoutY="281.0" mnemonicParsing="false" onAction="#handlerModifyCustomer" text="Update" />
+                        <Button fx:id="buttonSetInactive" layoutX="786.0" layoutY="281.0" mnemonicParsing="false" onAction="#handlerSetInactive" text="Set Inactive" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="60.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="302.0" prefWidth="939.0" text="Admin">
+               <content>
+                  <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="210.0" prefWidth="937.0">
+                     <children>
+                        <TableView fx:id="tableViewUsers" layoutX="249.0" layoutY="65.0" prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="tableColumnUserUsername" prefWidth="95.0" text="Username" />
+                              <TableColumn fx:id="tableColumnUserPassword" prefWidth="104.0" text="Password" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="249.0" layoutY="22.0" prefHeight="17.0" prefWidth="37.0" text="Users" />
+                        <Button layoutX="40.0" layoutY="65.0" mnemonicParsing="false" onAction="#handlerOpenUserLog" text="Open User Log" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</AnchorPane>

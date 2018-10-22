@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WGU2.view.LoginController">
+   <children>
+      <Pane prefHeight="401.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="labelTitle" layoutX="42.0" layoutY="41.0" text="Client manager" />
+            <TextField fx:id="textFieldUsername" layoutX="286.0" layoutY="188.0" />
+            <PasswordField fx:id="passwordFieldPassword" layoutX="286.0" layoutY="226.0" />
+            <Label fx:id="labelUsername" layoutX="181.0" layoutY="192.0" text="Username" />
+            <Label fx:id="labelPassword" layoutX="181.0" layoutY="230.0" text="Password" />
+            <Button layoutX="389.0" layoutY="277.0" mnemonicParsing="false" onAction="#handlerLogin" text="Login" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

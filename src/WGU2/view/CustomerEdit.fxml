@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WGU2.view.CustomerEditController">
+   <children>
+      <TextField fx:id="textFieldCustName" layoutX="40.0" layoutY="72.0" prefHeight="25.0" prefWidth="209.0" />
+      <TextField fx:id="textFieldCustPhone" layoutX="366.0" layoutY="72.0" />
+      <TextField fx:id="textFieldCustAddress" layoutX="42.0" layoutY="127.0" prefHeight="25.0" prefWidth="216.0" />
+      <TextField fx:id="textFieldCustAddress2" layoutX="43.0" layoutY="178.0" />
+      <ComboBox fx:id="comboBoxCustCountry" layoutX="43.0" layoutY="251.0" prefHeight="25.0" prefWidth="106.0" />
+      <ComboBox fx:id="comboBoxCustCity" layoutX="174.0" layoutY="251.0" prefWidth="150.0" />
+      <Label fx:id="labelCustomerAddModify" layoutX="39.0" layoutY="23.0" text="Label" />
+      <Label layoutX="39.0" layoutY="54.0" text="Name" />
+      <Label layoutX="40.0" layoutY="110.0" text="Address" />
+      <Label layoutX="174.0" layoutY="232.0" text="City" />
+      <Label layoutX="43.0" layoutY="232.0" text="Country" />
+      <Label layoutX="366.0" layoutY="54.0" text="Phone Number" />
+      <Button fx:id="buttonSave" layoutX="398.0" layoutY="336.0" mnemonicParsing="false" onAction="#handlerSave" text="Save" />
+      <Button fx:id="buttonCancel" layoutX="462.0" layoutY="336.0" mnemonicParsing="false" onAction="#handlerCancel" text="Cancel" />
+      <Button fx:id="buttonNewCity" layoutX="259.0" layoutY="286.0" mnemonicParsing="false" onAction="#handlerNewCity" text="New City" />
+      <Button fx:id="buttonNewCountry" layoutX="63.0" layoutY="286.0" mnemonicParsing="false" onAction="#handlerNewCountry" text="New Country" />
+      <TextField fx:id="textFieldCustPostalCode" layoutX="365.0" layoutY="251.0" />
+      <Label layoutX="365.0" layoutY="231.0" text="Postal Code" />
+      <Label layoutX="41.0" layoutY="161.0" text="Address 2" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="533.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WGU2.view.ReportsController">
+   <children>
+      <TableView fx:id="tableViewReports" layoutX="15.0" layoutY="82.0" prefHeight="382.0" prefWidth="513.0">
+        <columns>
+          <TableColumn fx:id="tableColAppStart" prefWidth="136.0" text="Start" />
+          <TableColumn fx:id="tableColAppEnd" prefWidth="149.0" text="End" />
+            <TableColumn fx:id="tableColAppConsultant" prefWidth="66.0" text="Consultant" />
+            <TableColumn fx:id="tableColAppDescription" prefWidth="96.0" text="Type" />
+            <TableColumn fx:id="tableColAppLocation" prefWidth="65.0" text="Location" />
+        </columns>
+      </TableView>
+      <Label fx:id="labelReportTitle" layoutX="14.0" layoutY="34.0" text="Label" />
+      <Button layoutX="467.0" layoutY="550.0" mnemonicParsing="false" onAction="#handlerOk" prefHeight="43.0" prefWidth="55.0" text="OK" />
+      <Label fx:id="labelOne" layoutX="343.0" layoutY="474.0" text="Label" />
+      <Label fx:id="labelTwo" layoutX="343.0" layoutY="491.0" text="Label" />
+      <Label fx:id="labelThree" layoutX="343.0" layoutY="508.0" text="Label" />
+   </children>
+</AnchorPane>
